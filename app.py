@@ -11,7 +11,7 @@ model_1=pickle.load(open("Knn.pickle","rb"))
 model_2=pickle.load(open("Poly.pickle","rb"))
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'ec9439cfc6c796ae2029594d'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 @app.route('/')
 @app.route('/Home')
@@ -26,7 +26,7 @@ def home_page():
    
     return render_template('index.html',gender=gender,ssc_b=ssc_b,hsc_b=hsc_b,hsc_s=hsc_s,degree_t=degree_t,workex=workex)
 
-@app.route('/predict',methods=["GET","post"])
+@app.route('/predict',methods=['GET','POST'])
 
 def predict():
     Name=request.form.get('Name')
@@ -52,4 +52,4 @@ def predict():
 
 
 if __name__ =='__main__':
-    app.run(debug=True,port=8088)
+    app.run(debug=True,port=8000)
