@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+
+     <!-- CSS only -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+     <!-- JavaScript Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</head>
+<body>
+    {%  if prediction_placement==[1] %}
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <p class="Heading">Congratulations ! </p>
+                    <p class="S_name"> {{Name}} </p>
+                    <p class="lines">Just don't give up trying to do what you really want to do. Where there is love and inspiration I don't think you can go wrong</p>
+                    <p class="Salary">Our Model Predicts that you will get a package of {{prediction_salary}} rs per year   </p>
+                    <p class="wish">Best of luck Buddy</p>
+                </div>
+
+    {% else %}
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <p class="Heading">Sorry ! </p>
+                <p class="S_name"> {{Name}} </p>
+                <p class="lines">Just don't give up trying to do what you really want to do. Where there is love and inspiration I don't think you can go wrong</p>
+                <p class="wish">Best of luck Buddy</p>
+            </div>
+    {% endif %}
+    
+        <div class="col-6">
+            <div class="tactis">
+                <img src="/static/net.webp" alt="tactics">
+            </div>
+
+
+
+
+
+</body>
+
+<style>
+    body{
+        background-color: #f9f8fd;
+    }
+    .tactis{
+        margin-top: 140px;
+        margin-left: 50px;
+    }
+    .Heading{
+        margin-top: 160px;
+        font-size: 50px;
+        text-align: center;
+    }
+    .S_name{
+        text-align: center;
+        font-size: 20px;
+    }
+    .lines{
+        text-align: center;
+    }
+    .salary{
+        text-align: center;
+    }
+    .wish{
+        text-align: center;
+    }
+</style>
+
+</html>
