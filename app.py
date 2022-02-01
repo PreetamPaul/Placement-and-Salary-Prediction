@@ -26,7 +26,7 @@ def home_page():
    
     return render_template('index.html',gender=gender,ssc_b=ssc_b,hsc_b=hsc_b,hsc_s=hsc_s,degree_t=degree_t,workex=workex)
 
-@app.route('/predict',methods=["post"])
+@app.route('/predict',methods=["GET","post"])
 
 def predict():
     Name=request.form.get('Name')
